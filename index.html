@@ -1,0 +1,980 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rutuja D Chikkorde - Portfolio</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 80px;
+      background-image: linear-gradient(to right, black, grey);
+      overflow: hidden;
+      transition: background-image 0.1s ease;
+    }
+
+    .navbar:hover {
+      background-image: linear-gradient(to left, grey, black);
+    }
+
+    .navbar a {
+      color: grey;
+      text-align: center;
+      padding: 20px;
+      font-size: 20px;
+      text-decoration: none;
+      transition: color 0.2s ease;
+      font-family: "Copperplate", "Copperplate Gothic Light", fantasy;
+    }
+
+    .navbar a:hover {
+      color: white;
+    }
+
+    .title {
+      width: 100%;
+      height: 300px;
+      background-image: linear-gradient(to right, black, grey);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px;
+      border: 20px solid transparent;
+      cursor: -webkit-grab;
+      transition: background-image 0.1s ease, box-shadow 0.5s ease, transform 0.5s ease;
+    }
+
+    .title:hover {
+      background-image: linear-gradient(to right, grey, black);
+      box-shadow: 8px 8px 8px 8px rgba(1, 1, 1, 0.3);
+      transform: scale(1.05);
+    }
+
+    .title h1 {
+      font-size: 70px;
+      color: white;
+      text-align: center;
+      font-family: "Copperplate", "Copperplate Gothic Light", fantasy;
+      transition: font-size 0.3s ease, cursor 0.3s ease, color 0.3s ease;
+    }
+
+    .title:hover h1 {
+      font-size: 90px;
+      font-weight: bold;
+      cursor: -webkit-grabbing;
+      color: white;
+    }
+
+    #home h1 {
+      font-family: "Copperplate", "Copperplate Gothic Light", fantasy;
+      font-size: 70px;
+      transition: font-size 0.3s ease, text-shadow 0.3s ease, color 0.3s ease;
+    }
+
+    #home h1:hover {
+      color: black;
+      font-size: 80px;
+      text-shadow: 10px 10px 10px rgba(150, 150, 150, 0.7);
+    }
+
+    #home p {
+      font-family: "Copperplate", "Copperplate Gothic Light", fantasy;
+      font-size: 20px;
+    }
+
+    .about-me .head h1 {
+      width: 100%;
+      color: white;
+      text-shadow: 10px 10px 10px rgba(0, 0, 0, 0.7);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: "Copperplate", "Copperplate Gothic Light", fantasy;
+      font-size: 70px;
+      transition: font-size 0.3s ease, text-shadow 0.3s ease, color 0.3s ease;
+    }
+
+    #about .head h1:hover {
+      color: black;
+      font-size: 80px;
+      text-shadow: 10px 10px 10px rgba(150, 150, 150, 0.7);
+    }
+    .projects .head h1 {
+      width: 100%;
+      color: black;
+      text-shadow: 10px 10px 10px rgba(150, 150, 150, 0.7);
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: "Copperplate", "Copperplate Gothic Light", fantasy;
+      font-size: 70px;
+      transition: font-size 0.3s ease, text-shadow 0.3s ease, color 0.3s ease;
+    }
+
+    #projects .head h1:hover {
+      color: white;
+      font-size: 80px;
+      text-shadow: 10px 10px 10px rgba(0, 0, 0, 0.7);
+
+    }
+
+    .about-me {
+      display: block;
+      padding: 50px;
+      background-color: #fff;
+      margin: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .about-me .ext {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px;
+      width: 100%;
+    }
+
+    .about-me .ext .img {
+      display: flex;
+      justify-content: left;
+      align-items: left;
+      padding: 20px;
+      width: 50%;
+    }
+
+    .about-me .ext .img img {
+      width: 400px;
+      height: 500px;
+      border-radius: 20%;
+      display: flex;
+      justify-content: left;
+      align-items: left;
+      box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    .about-me .ext .desc {
+      border: 10px;
+      border-radius: 50px 0px 50px 0px;
+      text-align: right;
+      padding: 20px;
+      width: 90%;
+      box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .about-me .ext .desc:hover {
+      background-image: linear-gradient(to right, black, grey);
+    }
+    .projects .proj .desc {
+      width:90%;
+      border-radius:0px 0px 0px  0px;
+      padding:50px;
+      background-image:linear-gradient(to right, white ,grey);
+    }
+
+    .projects .proj .desc:hover {
+      background-image: linear-gradient(to right, grey,white);
+    }
+
+    .about-me .ext .desc p {
+      padding: 20px;
+      text-align: center;
+      font-size: 24px;
+      font-family: "Copperplate", "Copperplate Gothic Light", fantasy;
+      transition: box-shadow 0.1s ease;
+      color: white;
+    }
+
+    .about-me .ext .desc:hover p {
+      color: white;
+      transform: scale(1.05);
+      box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.1);
+    }
+     li{
+      color:black;
+      font-family: "Copperplate", "Copperplate Gothic Light", fantasy;
+      text-align:left;
+     }
+    .projects {
+      display: block;
+      padding: 40px;
+      height: 4500px;
+      background-image: linear-gradient(to right, white, grey);
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .projects .proj {
+      display: flex;
+      justify-content: left;
+      align-items: left;
+      padding: 20px;
+      width: 100%;
+      position: relative;
+    }
+    .projects .proj .img img {
+      width: 500px;
+      height: 500px;
+      border-radius: 5%;
+      box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.5);
+      transition: transform 0.5s ease;
+    }
+
+    .projects .proj .img .hover-img {
+      position: absolute;
+      top: 200px;
+      left: 150px;
+      width: 400px;
+      height: 400px;
+      border-radius: 5%;
+      box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.5);
+      opacity: 0;
+      transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+
+    .projects .proj .img:hover .hover-img {
+      opacity: 1;
+      transform: translateX(20px);
+    }
+    .project-title {
+      font-family: 'Copperplate', 'Copperplate Gothic Light', fantasy;
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 10px;
+  }
+  .section-title {
+    font-family: 'Copperplate', 'Copperplate Gothic Light', fantasy;
+     font-size:20px;
+      font-weight: bold;
+      margin-top: 10px;
+  }
+  .technologies {
+    font-family: 'Copperplate', 'Copperplate Gothic Light', fantasy;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+      flex-wrap: wrap;
+  }
+  .technology {
+    font-family: 'Copperplate', 'Copperplate Gothic Light', fantasy;
+
+      background-color: #f0f0f0;
+      border-radius: 5px;
+      padding: 5px 10px;
+      margin: 5px;
+  }
+  p{
+    font-family: 'Copperplate', 'Copperplate Gothic Light', fantasy;
+    font-size:17px;
+  }
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.gitref {
+    display: flex;
+    align-items: center;
+}
+
+.gitref a {
+    font-family: 'Copperplate', 'Copperplate Gothic Light', fantasy;
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease, color 0.3s ease;
+    margin-right: 10px;
+}
+
+.gitref img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gitref a:hover {
+    transform: scale(1.1);
+    color: #0073e6; /* Change the color on hover */
+}
+
+.gitref img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(0, 115, 230, 0.7); /* Add a shadow effect on hover */
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 800px;
+  margin: 50px auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  text-align: center;
+  color: #333;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Distribute space between items */
+  margin-top: 20px;
+}
+
+.skill {
+  width: calc(30% - 20px); /* Two skills per row with margin */
+  margin: 10px;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative; /* Required for absolute positioning */
+}
+
+.skill:hover {
+  transform: translateY(-3px); /* Move up slightly on hover */
+  box-shadow: 8px 4px  4px 4px rgba(0, 100, 0, 1) /* Add subtle shadow on hover */
+}
+
+.skill-name {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.skill-bar {
+  width: 100%;
+  height: 20px;
+  background-color: #DEE0DC;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.skill-level {
+  height: 100%;
+  background-image: linear-gradient(to left, darkgreen, #87D813); /* Green color */
+  transition: width 0.5s ease, background-image 0.5s ease; /* Smooth width and background transition */
+}
+
+.skill:hover .skill-level {
+  background-image: linear-gradient(to left, #87D813, darkgreen); /* Green color */
+}
+
+/* Sparkle animation */
+@keyframes sparkle {
+  0% { left: -50%; }
+  100% { left: 100%; }
+}
+
+.sparkle {
+  position: absolute;
+  top: 0;
+  left: -50%; /* Start position off screen */
+  width: 150%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.8) 80%);
+  z-index: 2; /* Ensure sparkle is above skill-level */
+  animation: sparkle 1.5s linear infinite;
+  opacity: 0; /* Initially hidden */
+}
+
+.skill:hover .sparkle {
+  
+  opacity: 1; /* Show sparkle on hover */
+}
+#contact a{
+  
+    color: white; /* Blue color for links */
+    text-decoration: none;
+    font-size:25px;
+    transition: border-bottom 0.3s ease font-size 0.1s ease;
+  
+  
+  
+}
+#contact a:hover {
+  font-size:28px;
+
+
+}
+
+
+.links {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+
+}
+
+.links a {
+
+  margin: 0 10px;
+  transition: transform 0.3s ease;
+}
+.links img{
+  border-radius:20px;
+  width: 40px; /* Adjust size as needed */
+  height: 40px;
+}
+.links img:hover{
+  box-shadow:4px 4px 4px 4px rgba(0,0,0,1);
+  width: 50px; /* Adjust size as needed */
+  height: 50px;
+  border-radius:40px;
+
+}
+
+.links a:hover {
+  transform: translateY(-3px);
+   /* Move up slightly on hover */
+}
+.intro {
+  text-align: center;
+  font-size: 1.1em;
+  color: white;
+  margin-top: 20px;
+}
+
+
+
+
+#certifications .head h1 {
+  text-align: center;
+  color: #333;
+}
+
+.certificates {
+  display: flex;
+
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.certificate {
+  width: 500px; /* Two certificates per row */
+  background-color: #f9f9f9;
+
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 10px;
+}
+
+.certificate h2 {
+  font-family: 'Copperplate', 'Copperplate Gothic Light', fantasy;
+
+  text-align: center;
+  color: #333;
+  font-size: 1.2em;
+}
+
+.certificate a {
+  font-family: 'Copperplate', 'Copperplate Gothic Light', fantasy;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  color: darkblue;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.certificate iframe {
+  width:500px;
+  border: none;
+}
+  </style>
+</head>
+<body>
+
+<div class="navbar">
+  <div class="com">
+    <a class="active" href="#home">Home</a>
+    <a href="#about">About me</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#certifications">Certifications</a>
+    <a href="#contact">Contact me</a>
+  </div>
+</div>
+
+<div class="title">
+  <h1>Portfolio</h1>
+</div>
+
+<div id="home" style="height: 500px; background-color: white; text-align: center;">
+  <h1>Welcome to My Portfolio</h1>
+  <p>Heyy!! I am Rutuja D Chikkorde ! </p>
+  <p>Explore various sections of the navbar to know more about me</p>
+</div>
+
+<div id="about" class="about-me" style="background-image: linear-gradient(to right , black, grey); text-align: center;">
+  <div class="head">
+    <h1>About me</h1>
+  </div>
+  <div class="ext">
+    <div class="img">
+      <img src="profile.png" alt="Profile Picture">
+    </div>
+    <div class="desc">
+      <p>
+        I am <strong>Rutuja D Chikkorde</strong>, a final year student at <b>KLE Technological University, Hubballi</b>, where I am immersed in exploring the intersections of <b>coding, cloud computing, blockchain, networking, web development, and machine learning</b>.
+        <br><br>
+        My tech journey started with a passion for solving complex problems using elegant software solutions. I'm focused on cloud computing for scalable systems, exploring blockchain's potential across industries, and optimizing networking for security. With a strong coding background and a love for algorithms, I'm dedicated to expanding my expertise in these areas. I believe technology drives positive change and innovation, and I'm committed to making a meaningful impact. Beyond academics, I stay updated on tech advancements, engage in coding challenges, and collaborate on boundary-pushing projects.
+      </p>
+    </div>
+  </div>
+</div>
+
+<div id="projects" class="projects">
+  <div class="head">
+    <h1>Projects</h1>
+  </div>
+  <div class="proj">
+    
+      <div class="img">
+        <img src="proj1-hover.png" alt="Project Image">
+        <img src="own.png" alt="Project Hover Image" class="hover-img">
+      </div>
+      <div class="desc">
+        <div class="project-title">Data Provenance in a Cloud Environment Using Blockchain</div>
+        <div class="section">
+            <div class="section-title">Problem Statement:</div>
+            <p>Design a system to collect provenance data from the OwnCloud application and store it securely on the blockchain. Improve the Proof of Stake (PoS) algorithm using reputation-based mechanisms to increase scalability and security.</p>
+        </div>
+        <div class="section">
+            <div class="section-title">Technologies Explored:</div>
+            <div class="technologies">
+                <div class="technology">Ubuntu OS</div>
+                <div class="technology">OwnCloud</div>
+                <div class="technology">IPFS</div>
+                <div class="technology">Ethereum Blockchain</div>
+                <div class="technology">MetaMask</div>
+            </div>
+        </div>
+        <div class="section">
+            <div class="section-title">Project Description:</div>
+            <p>This project focuses on enhancing data security and scalability in cloud environments using blockchain technology. By integrating OwnCloud with Ethereum blockchain, provenance data is securely collected and stored. The system also leverages a reputation-based consensus algorithm to improve the traditional Proof of Stake (PoS) mechanism, enhancing both scalability and security of the blockchain network.</p>
+        </div>
+        <div class="container">
+          <div class="gitref">
+              <a href="https://github.com/RutujaDC/minorproject">
+                 <b> View on GitHub</b>
+              </a>
+              <a href="https://github.com/RutujaDC/minorproject">
+                  <img src="git.jpeg" alt="GitHub Link">
+              </a>
+          </div>
+          <div class="gitref">
+              <a href="Springer_SNCS_Consensus__rPOS_.pdf">
+                 <b> View Research Paper</b>
+              </a>
+              <a href="Springer_SNCS_Consensus__rPOS_.pdf">
+                  <img src="research-paper-line-icon-vector.jpg" alt="Research Paper Link">
+              </a>
+          </div>
+      </div>
+      </div>
+    
+  </div>
+
+
+
+
+
+
+
+  <div class="proj">
+    
+    <div class="img">
+      <img src="preg.jpg" alt="Project Image">
+      <img src="pregHover.jpg" alt="Project Hover Image" class="hover-img">
+    </div>
+    <div class="desc">
+      <div class="project-title">Pregnancy Tracking System</div>
+      <div class="section">
+          <div class="section-title">Problem Statement:</div>
+          <p>Develop a Pregnancy Tracking System offering personalized prenatal care and support to improve maternal health outcomes. The system aims to reduce the global maternal mortality ratio in line with<b> SDG 3: Good Health and Well-being, particularly Target 3.1</b>, by providing timely reminders, customized nutrition suggestions, and symptom monitoring.</p>
+      </div>
+      <div class="section">
+          <div class="section-title">Technologies Explored:</div>
+          <div class="technologies">
+            <div class="technology">React: Frontend</div>
+            <div class="technology">Spring Boot: Backend</div>
+            <div class="technology">MongoDB: Database</div>
+          </div>
+      </div>
+      <div class="section">
+        <div class="section-title">Features:</div>
+        <ul>
+            <li>Proactive Healthcare: Early detection and management of health risks.</li>
+            <li>Empowerment of Expectant Mothers: Timely reminders, nutritional guidance, and fitness support.</li>
+            <li>Universal Access: Leveraging technology to overcome geographical and socio-economic barriers.</li>
+        </ul>
+    </div>
+      <div class="container">
+        <div class="gitref">
+            <a href="https://github.com/NirmalaKanti/Pregnancy-Tracker-Application-using-java-.git">
+               <b> View on GitHub</b>
+            </a>
+            <a href="https://github.com/NirmalaKanti/Pregnancy-Tracker-Application-using-java-.git">
+                <img src="git.jpeg" alt="GitHub Link">
+            </a>
+        </div>
+        <div class="gitref">
+            <a href="https://sites.google.com/view/rutujachikkorde">
+                <b>Explore more</b>
+            </a>
+            <a href="https://sites.google.com/view/rutujachikkorde">
+                <img src="port.jpg" alt="Explore">
+            </a>
+        </div>
+    </div>
+    </div>
+  
+</div>
+
+
+
+
+
+<div class="proj">
+    
+  <div class="img">
+    <img src="mach.jpg" alt="Project Image">
+    <img src="kablocks1(1).jpg" alt="Project Hover Image" class="hover-img">
+  </div>
+  <div class="desc">
+    <div class="project-title">3D UNet3+: An Optimized Approach for 3D Brain Tumor Segmentation</div>
+    <div class="section">
+        <div class="section-title">Problem Statement:</div>
+        <p>Current brain tumor segmentation models struggle with complexity and variability, necessitating more advanced tools. The 3D UNet3+ model improves segmentation accuracy and reduces computational requirements, making it ideal for real-time applications and advanced technologies like edge AI.</p>
+    </div>
+    <div class="section">
+        <div class="section-title">Architecture</div>
+        <div class="technologies">
+          <div class="technology">3D UNet3+</div>
+
+        </div>
+    </div>
+    <div class="section">
+      <div class="section-title">Features:</div>
+     <p>Brain tumors present significant challenges in diagnosis and treatment, necessitating precise segmentation of MRI images for effective treatment planning. Current models often struggle with the complexity and variability of brain tumors, creating a need for more advanced and computationally efficient tools. This work introduces the 3D UNet3+ model, designed to improve brain tumor image segmentation while significantly reducing computational requirements. This makes it suitable for real-time applications and integration into advanced technologies like edge AI and handheld devices.</p>
+  </div>
+    <div class="container">
+      <div class="gitref">
+          <a href="https://github.com/aadi446153/3D_Unet3-">
+             <b> View on GitHub</b>
+          </a>
+          <a href="https://github.com/aadi446153/3D_Unet3-">
+              <img src="git.jpeg" alt="GitHub Link">
+          </a>
+      </div>
+      <div class="gitref">
+        <a href="3D_UNet3__Jaipur.pdf">
+          <b> View Research Paper</b>
+       </a>
+       <a href="3D_UNet3__Jaipur.pdf">
+           <img src="research-paper-line-icon-vector.jpg" alt="Research Paper Link">
+       </a>
+      </div>
+  </div>
+  </div>
+
+</div>
+
+
+
+
+<div class="proj">
+    
+  <div class="img">
+    <img src="aps.jpg" alt="Project Image">
+    <img src="aps1.jpg" alt="Project Hover Image" class="hover-img">
+  </div>
+  <div class="desc">
+    <div class="project-title">Arthematic Problem Solving</div>
+    <div class="section">
+        <div class="section-title">Problem Statement:</div>
+        <p>This project showcases my solutions to complex challenges, specifically targeting network-related problems using <b>advanced Data Structures and Algorithms (DSA)</b>. I leverage dynamic programming for problems like <b>Longest Common Subsequence and Subset Sum, explore various tree structures like AVL and Red Black Trees, and tackle mathematical concepts such as Fermat's Little Theorem and Catalan Numbers. Additionally, I implement advanced algorithms including A* Search, Kadane's Algorithm, and Segment Trees</b>. My portfolio also covers essential<b> graph algorithms and principles like Lazy Propagation and Sliding Window.</b> </p>
+    </div>
+    <div class="section">
+      <div class="section-title">Language:</div>
+      <div class="technologies">
+          <div class="technology">C++</div>
+          
+          
+      </div>
+  </div>
+    <div class="container">
+      <div class="gitref">
+          <a href="https://github.com/RutujaDC/Portfolio-Solutions">
+             <b> View GitHub for codes</b>
+          </a>
+          <a href="https://github.com/RutujaDC/Portfolio-Solutions">
+              <img src="git.jpeg" alt="GitHub Link">
+          </a>
+      </div>
+      <div class="gitref">
+        <a href="https://rutujadc.github.io/">
+          <b> Explore</b>
+       </a>
+       <a href="https://rutujadc.github.io/">
+           <img src="port.jpg" alt="Research Paper Link">
+       </a>
+      </div>
+  </div>
+  </div>
+
+</div>
+<div class="head">
+  <h1>Other Works..</h1>
+</div>
+
+<div class="proj">
+    
+  <div class="img">
+    <img src="for.jpg" alt="Project Image">
+    <img src="6.png" alt="Project Hover Image" class="hover-img">
+  </div>
+  <div class="desc">
+    <div class="project-title">CLOUD FORENSICS WITH KUBERNETES</div>
+    <div class="section">
+        <div class="section-title">Problem Statement:</div>
+        <p>Develop a system to efficiently retrieve and secure logs from Kubernetes clusters, employing blockchain
+          for tamper-proof storage and security breaches and to provide essential data for investigations, and
+          ensure compliance with data protection regulations.</b> </p>
+    </div>
+    <div class="section">
+      <div class="section-title">Technologies Explored:</div>
+      <div class="technologies">
+        <div class="technology">Ubuntu OS</div>
+
+          <div class="technology">Kuberntes</div>
+          <div class="technology">IPFS</div>
+          <div class="technology">Ethereum Blockchain</div>
+          
+      </div>
+  </div>
+   
+   
+  </div>
+
+</div>
+
+<div class="proj">
+    
+  <div class="img">
+    <img src="sys.jpg" alt="Project Image">
+    <img src="sys2.jpg" alt="Project Hover Image" class="hover-img">
+  </div>
+  <div class="desc">
+    <div class="project-title">System Software </div>
+    <div class="section">
+        <div class="section-title">Problem Statement:</div>
+        <p>This work features C code implementations of essential system software components: assemblers, linkers, and loaders. These implementations delve into low-level programming tasks, including translating assembly code to machine language, resolving external references across modules, and loading executable programs into memory. Each section includes detailed C code examples and comprehensive explanations, showcasing proficiency in system-level programming and software development</b> </p>
+    </div>
+    <div class="section">
+      <div class="section-title">Language:</div>
+      <div class="technologies">
+          <div class="technology">C Programming</div>
+          
+          
+      </div>
+  </div>
+  <div class="container">
+    <div class="gitref">
+        <a href="https://github.com/RutujaDC/System-Software">
+           <b> View GitHub for codes</b>
+        </a>
+        <a href="https://github.com/RutujaDC/System-Software">
+            <img src="git.jpeg" alt="GitHub Link">
+        </a>
+    </div>
+   
+</div>
+   
+   
+   
+  </div>
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+<div id="skills" class="projects" style="height: 500px;">
+  <div class="head">
+    <h1>Skills</h1>
+  </div>
+    <div class="skills">
+        <div class="skill">
+            <div class="skill-name">C Programming</div>
+            <div class="skill-bar">
+                <div class="skill-level" style="width: 80%;"></div>
+            </div>
+        </div>
+        <div class="skill">
+            <div class="skill-name">C++ Programming</div>
+            <div class="skill-bar">
+                <div class="skill-level" style="width: 90%;"></div>
+            </div>
+        </div>
+        <div class="skill">
+            <div class="skill-name">Python Programming</div>
+            <div class="skill-bar">
+                <div class="skill-level" style="width: 40%;"></div>
+            </div>
+        </div>
+        <!-- Add more skills as needed -->
+        <div class="skill">
+            <div class="skill-name">HTML/CSS</div>
+            <div class="skill-bar">
+                <div class="skill-level" style="width: 80%;"></div>
+            </div>
+        </div>
+        <div class="skill">
+            <div class="skill-name">JavaScript</div>
+            <div class="skill-bar">
+                <div class="skill-level" style="width: 40%;"></div>
+            </div>
+        </div>
+        <div class="skill">
+            <div class="skill-name">SQL</div>
+            <div class="skill-bar">
+                <div class="skill-level" style="width: 50%;"></div>
+            </div>
+        </div>
+        <div class="skill">
+            <div class="skill-name">OOPS with C++</div>
+            <div class="skill-bar">
+                <div class="skill-level" style="width: 75%;"></div>
+            </div>
+        </div>
+        <div class="skill">
+            <div class="skill-name">Blockchain</div>
+            <div class="skill-bar">
+                <div class="skill-level" style="width: 70%;"></div>
+            </div>
+        </div>
+        <div class="skill">
+            <div class="skill-name">Cloud Computing</div>
+            <div class="skill-bar">
+                <div class="skill-level" style="width: 70%;"></div>
+            </div>
+        </div>
+        <div class="skill">
+            <div class="skill-name">Kubernetes</div>
+            <div class="skill-bar">
+                <div class="skill-level" style="width:45%;"></div>
+            </div>
+        </div>
+        <div class="skill">
+            <div class="skill-name">Computer Networking</div>
+            <div class="skill-bar">
+                <div class="skill-level" style="width: 60%;"></div>
+            </div>
+        </div>
+</div>
+</div>
+
+
+
+<div id="certifications" class="projects" style="height: 2050px; width:100%">
+  <div class="head">
+    <h1>Certifications</h1>
+  </div>
+  <div class="certificates"  >
+    <div class="certificate">
+      <h2>Juniper-Networking</h2>
+      <a href="Certifications\jun1.pdf" target="_blank">View Certification</a>
+      <iframe src="Certifications\jun1.pdf" width="100%" height="400px"></iframe>
+    </div>
+    <div class="certificate">
+      <h2>Juniper-Cloud</h2>
+      <a href="Certifications\jun2.pdf" target="_blank">View Certification</a>
+      <iframe src="Certifications\jun2.pdf" width="100%" height="400px"></iframe>
+    </div>
+    <div class="certificate">
+      <h2>infosys</h2>
+      <a href="Certifications\CloudInfosys.pdf" target="_blank">View Certification</a>
+      <iframe src="Certifications\CloudInfosys.pdf" width="100%" height="400px"></iframe>
+    </div>
+    <div class="certificate">
+      <h2>WiDS</h2>
+      <a href="Certifications\wids.pdf" target="_blank">View Certification</a>
+      <iframe src="Certifications\wids.pdf" width="100%" height="400px"></iframe>
+    </div>
+    <div class="certificate">
+      <h2>Cisco</h2>
+      <a href="Certifications\netbase.pdf" target="_blank">View Certification</a>
+      <iframe src="Certifications\netbase.pdf" width="100%" height="400px"></iframe>
+    </div>
+  </div> 
+   
+
+</div>
+
+
+
+
+<div id="contact" class="about-me" style="background-image: linear-gradient(to right , black, grey); text-align: center;">
+  <div class="head">
+    <h1>Contact me</h1>
+  </div>
+  <p class="intro">Heyy!! I'm <b>Rutuja D Chikkorde</b> , a final-year student excited to embark on new opportunities. If my portfolio intrigues you and you'd like to discuss potential collaborations, please <a href="mailto:chikkorde.rutu@gmail.com"><b>contact me via email</b></a>. I look forward to connecting with you and exploring how I can contribute to your team's success!</p>
+<br><br>
+<div style="display: flex; justify-content: space-between; padding: 20px; background-image: linear-gradient(to left, black,grey; border-radius: 8px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); margin: 50px auto; max-width: 800px;">
+  <a href="tel:+917620875241" style="color: blue; font-family: 'Copperplate', 'Copperplate Gothic Light', fantasy; text-decoration: none;">
+    +91-7620875241
+  </a>
+  <a href="mailto:chikkorde.rutu@gmail.com" style="color: lightblue; font-family: 'Copperplate', 'Copperplate Gothic Light', fantasy; text-decoration: none;">
+    chikkorde.rutu@gmail.com
+  </a>
+</div>
+    <div class="links">
+      <a href="https://www.linkedin.com/in/rutuja-chikkorde-a2a340259?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">
+        <img src="ln3.png" alt="LinkedIn" width="30" height="30">
+      </a>
+      <a href="https://github.com/RutujaDC" target="_blank">
+        <img src="git.jpeg" alt="GitHub" width="30" height="30">
+      </a>
+      <a href="tel:+917620875241">
+        <img src="phone.png" alt="Phone" width="30" height="30">
+      </a>
+      <a href="mailto:chikkorde.rutu@gmail.com">
+        <img src="mail.jpeg" alt="Email" width="30" height="30">
+      </a>
+
+    </div>
+</div>
+
+</body>
+</html>
